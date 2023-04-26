@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microwave.Classes.Interfaces;
 
 namespace Microwave.Classes.Controllers
@@ -68,6 +68,10 @@ namespace Microwave.Classes.Controllers
                 int remaining = myTimer.TimeRemaining;
                 myDisplay.ShowTime(remaining / 60, remaining % 60);
             }
+        }
+          public void addTimer(int time)
+        {
+            myTimer.TimeRemaining += time;
         }
     }
 }
