@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +9,7 @@ namespace Microwave.Classes.Interfaces
 {
     public interface ITimer
     {
-        int TimeRemaining { get; }
+        int TimeRemaining { get; set;}
         event EventHandler Expired;
         event EventHandler TimerTick;
 
