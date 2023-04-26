@@ -16,7 +16,7 @@ namespace Microwave.Classes.Boundary
         public void Press()
         {
             Pressed?.Invoke(this, EventArgs.Empty);
-            Console.Beep(2500, 750);
+            Console.Beep(2500, 750); // causes error in the two button tests, due to pipeline not supporting beep(). 
         }
     }
 }
