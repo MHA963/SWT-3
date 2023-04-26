@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microwave.Classes.Controllers;
 using Microwave.Classes.Interfaces;
 using NSubstitute;
@@ -81,6 +81,17 @@ namespace Microwave.Test.Unit
             uut.Stop();
 
             powerTube.Received().TurnOff();
+        }
+        
+        [Test]
+        public void AddTimer_WhenCalled_ShouldAddTimeRemaining()
+        {
+            uut.StartCooking(50, 60);
+            timer.TimeRemaining = 60;
+            
+            uut.addTimer(10);
+
+            Assert.That(timer.TimeRemaining, Is.EqualTo(70));
         }
 
     }
