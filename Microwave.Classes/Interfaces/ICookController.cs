@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +10,6 @@ namespace Microwave.Classes.Interfaces
     {
         void StartCooking(int power, int time);
         void Stop();
+        void addTimer(int time);
     }
 }
