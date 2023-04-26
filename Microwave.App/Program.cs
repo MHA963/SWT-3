@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microwave.Classes.Boundary;
 using Microwave.Classes.Controllers;
 
@@ -38,6 +38,9 @@ namespace Microwave.App
             timeButton.Press();
 
             startCancelButton.Press();
+            
+            //adding 10 seconds after the cooking starts 
+            cooker.addTimer(10);
 
             // The simple sequence should now run
 
