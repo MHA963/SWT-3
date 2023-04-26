@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using Microwave.Classes.Interfaces;
 
 namespace Microwave.Classes.Boundary
@@ -36,7 +37,13 @@ namespace Microwave.Classes.Boundary
         private void Expire()
         {
             timer.Enabled = false;
-            Expired?.Invoke(this, System.EventArgs.Empty);
+            Expired?.Invoke(this,System.EventArgs.Empty);
+            Console.Beep(2500, 750);
+            Thread.Sleep(1000);
+            Console.Beep(2500, 750);
+            Thread.Sleep(1000);
+            Console.Beep(2500, 750);
+
         }
 
         private void OnTimerEvent(object sender, System.Timers.ElapsedEventArgs args)
