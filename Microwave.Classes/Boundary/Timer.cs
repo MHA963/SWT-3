@@ -34,7 +34,7 @@ namespace Microwave.Classes.Boundary
             timer.Enabled = false;
         }
 
-        private void Expire()
+        private void Expire() // the beep will cause exception if tested in pipeline/non windows system.
         {
             timer.Enabled = false;
             Expired?.Invoke(this,System.EventArgs.Empty);
