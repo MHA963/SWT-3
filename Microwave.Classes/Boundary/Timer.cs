@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using Microwave.Classes.Interfaces;
 
 namespace Microwave.Classes.Boundary
 {
     public class Timer : ITimer
     {
-        public int TimeRemaining { get; private set; }
+        public int TimeRemaining { get; set; }
 
         public event EventHandler Expired;
         public event EventHandler TimerTick;
