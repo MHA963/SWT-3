@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.Serialization;
 using Microwave.Classes.Interfaces;
 
@@ -73,6 +73,10 @@ namespace Microwave.Classes.Controllers
                 case States.SETTIME:
                     time += 1;
                     myDisplay.ShowTime(time, 0);
+                    break;
+                case States.COOKING:
+                    myCooker.addTimer(60);
+                    myDisplay.ShowTime(time/60, time % 60);
                     break;
             }
         }
