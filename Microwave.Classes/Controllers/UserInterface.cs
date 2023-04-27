@@ -75,8 +75,7 @@ namespace Microwave.Classes.Controllers
                     myDisplay.ShowTime(time, 0);
                     break;
                 case States.COOKING:
-                    myCooker.addTimer(60);
-                    myDisplay.ShowTime(time/60, time % 60);
+                    myCooker.add15Sec();
                     break;
             }
         }

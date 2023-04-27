@@ -40,7 +40,7 @@ namespace Microwave.App
             startCancelButton.Press();
             
             //adding 10 seconds after the cooking starts 
-            cooker.addTimer(10);
+            cooker.add15Sec();
 
             // The simple sequence should now run
 
